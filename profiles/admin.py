@@ -1,7 +1,15 @@
 from django.contrib import admin
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
-from .models import Profile
+from .models import Profile, Interest
+
+
+@admin.register(Interest)
+class InterestAdmin(admin.ModelAdmin):
+    list_display = ['name', 'slug', 'created_at']
+    search_fields = ['name', 'slug']
+    readonly_fields = ['created_at']
+    prepopulated_fields = {'slug': ('name',)}
 
 
 @admin.register(Profile)
@@ -24,6 +32,7 @@ class ProfileAdmin(admin.ModelAdmin):
         'updated_at',
         'profile_image_preview'
     ]
+    filter_horizontal = ['interests']
     
     fieldsets = (
         ('User', {
@@ -31,6 +40,9 @@ class ProfileAdmin(admin.ModelAdmin):
         }),
         ('Profile Information', {
             'fields': ('username', 'bio', 'profile_picture', 'profile_image_preview')
+        }),
+        ('Interests', {
+            'fields': ('interests',)
         }),
         ('Social Networks', {
             'fields': ('instagram_url', 'linkedin_url')

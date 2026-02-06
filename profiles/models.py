@@ -18,7 +18,24 @@ def user_profile_image_path(instance, filename):
     return f'profiles/{instance.user.id}/profile_{timestamp}_{unique_id}.{ext}'
 
 
+class Interest(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+    slug = models.SlugField(max_length=50, unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ['name']
+        indexes = [
+            models.Index(fields=['name'], name='interest_name_idx'),
+        ]
+
+
 class Profile(models.Model):
+    MAX_INTERESTS = 10
+
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='profile')
     is_host = models.BooleanField(default=False)
     username = models.CharField(max_length=32, blank=True, null=True, validators=[validate_username])
@@ -26,6 +43,7 @@ class Profile(models.Model):
     profile_picture = models.ImageField(upload_to=user_profile_image_path, blank=True, null=True)
     instagram_url = models.URLField(max_length=200, blank=True, validators=[validate_instagram_url])
     linkedin_url = models.URLField(max_length=200, blank=True, validators=[validate_linkedin_url])
+    interests = models.ManyToManyField(Interest, related_name='profiles', blank=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

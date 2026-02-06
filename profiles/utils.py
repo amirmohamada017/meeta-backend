@@ -10,7 +10,7 @@ logger = logging.getLogger('profiles')
 
 
 class ImageUploadUtility:
-    MAX_FILE_SIZE = 5 * 1024 * 1024  # 5 MB
+    MAX_FILE_SIZE = 5 * 1024 * 1024
     ALLOWED_FORMATS = ['JPEG', 'JPG', 'PNG', 'WEBP']
     MAX_DIMENSIONS = (1200, 1200)
     QUALITY = 85

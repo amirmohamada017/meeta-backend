@@ -5,16 +5,19 @@ from django.utils.translation import gettext_lazy as _
 from rest_framework import generics, status, viewsets
 from rest_framework import serializers as drf_serializers
 from rest_framework.views import APIView
+from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
 from rest_framework.throttling import UserRateThrottle
-from .models import Profile
+from .models import Profile, Interest
 from .serializers import (
     ProfileSerializer,
     ProfileDetailSerializer,
     ProfileImageUploadSerializer,
     PublicProfileSerializer,
+    InterestSerializer,
+    ProfileInterestSerializer,
 )
 
 
@@ -114,3 +117,57 @@ class ProfileViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = ProfileDetailSerializer
     permission_classes = [IsAuthenticated]
     http_method_names = ['get', 'head', 'options']
+
+
+class InterestViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Interest.objects.all()
+    serializer_class = InterestSerializer
+    permission_classes = [IsAuthenticated]
+    http_method_names = ['get', 'head', 'options']
+
+
+class ProfileInterestView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get_object(self):
+        profile, created = Profile.objects.with_full_details().get_or_create(
+            user=self.request.user,
+            defaults={'user': self.request.user}
+        )
+        return profile
+
+    def post(self, request, *args, **kwargs):
+        profile = self.get_object()
+        serializer = ProfileInterestSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        
+        interest_ids = serializer.validated_data['interest_ids']
+        current_count = profile.interests.count()
+        
+        if current_count + len(interest_ids) > Profile.MAX_INTERESTS:
+            return Response(
+                {'detail': _(f'You cannot have more than {Profile.MAX_INTERESTS} interests.')},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        interests = Interest.objects.filter(id__in=interest_ids)
+        profile.interests.add(*interests)
+        
+        return Response(
+            InterestSerializer(profile.interests.all(), many=True).data,
+            status=status.HTTP_200_OK
+        )
+
+    def delete(self, request, *args, **kwargs):
+        profile = self.get_object()
+        serializer = ProfileInterestSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        
+        interest_ids = serializer.validated_data['interest_ids']
+        interests = Interest.objects.filter(id__in=interest_ids)
+        profile.interests.remove(*interests)
+        
+        return Response(
+            InterestSerializer(profile.interests.all(), many=True).data,
+            status=status.HTTP_200_OK
+        )
