@@ -43,6 +43,3 @@ build/
 .coverage
 htmlcov/
 .pytest_cache/
-
-# Migrations cache
-*.mo
