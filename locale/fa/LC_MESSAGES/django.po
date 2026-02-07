@@ -321,3 +321,94 @@ msgstr "لطفاً یک آدرس لینکدین معتبر وارد کنید."
 #, python-brace-format
 msgid "You cannot have more than {Profile.MAX_INTERESTS} interests."
 msgstr "شما نمی‌توانید بیشتر از {Profile.MAX_INTERESTS} علاقه‌مندی داشته باشید."
+
+# Additional vocabulary
+msgid "Image"
+msgstr "تصویر"
+
+msgid "Type"
+msgstr "نوع"
+
+msgid "Username"
+msgstr "نام کاربری"
+
+msgid "User"
+msgstr "کاربر"
+
+msgid "Profiles"
+msgstr "پروفایل‌ها"
+
+msgid "Interests"
+msgstr "علاقه‌مندی‌ها"
+
+msgid "Authentication"
+msgstr "احراز هویت"
+
+msgid "profile"
+msgstr "پروفایل"
+
+msgid "profiles"
+msgstr "پروفایل‌ها"
+
+msgid "Name"
+msgstr "نام"
+
+msgid "Slug"
+msgstr "نامک"
+
+msgid "Created at"
+msgstr "تاریخ ایجاد"
+
+msgid "Administration"
+msgstr "مدیریت"
+
+msgid "interest"
+msgstr "علاقه‌مندی"
+
+msgid "Host"
+msgstr "میزبان"
+
+msgid "OTPs"
+msgstr "رمزهای یکبار مصرف"
+
+msgid "Users"
+msgstr "کاربران"
+
+msgid "Otp code"
+msgstr "کد یکبار مصرف"
+
+msgid "Phone number"
+msgstr "شماره تلفن"
+
+msgid "Status"
+msgstr "وضعیت"
+
+msgid "Time Info"
+msgstr "اطلاعات زمانی"
+
+msgid "Expires at"
+msgstr "تاریخ انقضا"
+
+msgid "First name"
+msgstr "نام"
+
+msgid "Last name"
+msgstr "نام خانوادگی"
+
+msgid "Is active"
+msgstr "فعال"
+
+msgid "Is staff"
+msgstr "کارمند"
+
+msgid "Date joined"
+msgstr "تاریخ عضویت"
+
+msgid "Password"
+msgstr "رمز عبور"
+
+msgid "Password confirmation"
+msgstr "تأیید رمز عبور"
+
+msgid "Blacklisted at"
+msgstr "تاریخ لیست سیاه"
