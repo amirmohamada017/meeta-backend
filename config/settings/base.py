@@ -17,7 +17,9 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
+    'django_daisy',
     'django.contrib.admin',
+    'django.contrib.humanize',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -35,6 +37,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -120,8 +123,9 @@ OTP_EXPIRY_MINUTES = 2
 OTP_RATE_LIMIT_MINUTES = 2
 SIGNUP_TOKEN_EXPIRY_MINUTES = 10
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fa'
 USE_I18N = True
+USE_L10N = True
 
 LANGUAGES = [
     ('en', 'English'),
@@ -130,8 +134,7 @@ LANGUAGES = [
 
 LOCALE_PATHS = [BASE_DIR / 'locale']
 
-TIME_ZONE = 'UTC'
-USE_I18N = True
+TIME_ZONE = 'Asia/Tehran'
 USE_TZ = True
 
 STATIC_URL = '/static/'
