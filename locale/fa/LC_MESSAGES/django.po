@@ -1,0 +1,323 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-07 04:46+0330\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: authentication/models.py:13 authentication/serializers.py:24
+#: authentication/serializers.py:25 authentication/serializers.py:40
+#: authentication/serializers.py:41 authentication/validators.py:13
+msgid "Phone number is required"
+msgstr "شماره تلفن الزامی است"
+
+#: authentication/models.py:37
+msgid "Superuser must have is_staff=True"
+msgstr "کاربر ارشد باید is_staff=True داشته باشد"
+
+#: authentication/models.py:39
+msgid "Superuser must have is_superuser=True"
+msgstr "کاربر ارشد باید is_superuser=True داشته باشد"
+
+#: authentication/models.py:62
+msgid "User"
+msgstr "کاربر"
+
+#: authentication/models.py:63
+msgid "Users"
+msgstr "کاربران"
+
+#: authentication/models.py:90
+msgid "OTP"
+msgstr "رمز یکبار مصرف"
+
+#: authentication/models.py:91
+msgid "OTPs"
+msgstr "رمزهای یکبار مصرف"
+
+#: authentication/serializers.py:26 authentication/serializers.py:27
+#: authentication/serializers.py:42 authentication/serializers.py:43
+msgid "Phone number must be exactly 11 digits"
+msgstr "شماره تلفن باید دقیقاً ۱۱ رقم باشد"
+
+#: authentication/serializers.py:50 authentication/serializers.py:51
+msgid "OTP code is required"
+msgstr "کد یکبار مصرف الزامی است"
+
+#: authentication/serializers.py:52 authentication/serializers.py:53
+msgid "OTP code must be exactly 4 digits"
+msgstr "کد یکبار مصرف باید دقیقاً ۴ رقم باشد"
+
+#: authentication/serializers.py:67 authentication/serializers.py:68
+msgid "Signup token is required"
+msgstr "توکن ثبت‌نام الزامی است"
+
+#: authentication/serializers.py:74 authentication/serializers.py:75
+#: authentication/validators.py:45
+msgid "First name cannot be empty"
+msgstr "نام نمی‌تواند خالی باشد"
+
+#: authentication/serializers.py:81 authentication/serializers.py:82
+#: authentication/validators.py:63
+msgid "Last name cannot be empty"
+msgstr "نام خانوادگی نمی‌تواند خالی باشد"
+
+#: authentication/services.py:23 authentication/services.py:109
+#: authentication/validators.py:18
+msgid "Phone number must be 11 digits starting with 09"
+msgstr "شماره تلفن باید ۱۱ رقم و با ۰۹ شروع شود"
+
+#: authentication/services.py:34
+msgid "Too many OTP requests. Please try again later"
+msgstr "درخواست‌های زیاد برای دریافت کد. لطفاً بعداً تلاش کنید"
+
+#: authentication/services.py:51
+msgid "OTP send failed"
+msgstr "ارسال کد یکبار مصرف ناموفق بود"
+
+#: authentication/services.py:60 authentication/views.py:49
+msgid "Failed to send OTP. Please try again later"
+msgstr "ارسال کد یکبار مصرف ناموفق بود. لطفاً بعداً تلاش کنید"
+
+#: authentication/services.py:141
+msgid "Signup token validation failed"
+msgstr "اعتبارسنجی توکن ثبت‌نام ناموفق بود"
+
+#: authentication/sms_provider.py:14 authentication/sms_provider.py:21
+#: authentication/sms_provider.py:30 authentication/sms_provider.py:37
+#: authentication/sms_provider.py:48
+msgid "SMS configuration error detected"
+msgstr "خطای پیکربندی پیامک شناسایی شد"
+
+#: authentication/sms_provider.py:17
+msgid "SMSIR_API_KEY is not configured in settings"
+msgstr "SMSIR_API_KEY در تنظیمات پیکربندی نشده است"
+
+#: authentication/sms_provider.py:24
+msgid "SMSIR_TEMPLATE_ID is not configured in settings"
+msgstr "SMSIR_TEMPLATE_ID در تنظیمات پیکربندی نشده است"
+
+#: authentication/sms_provider.py:33
+msgid "SMSIR_TEMPLATE_ID must be a valid integer"
+msgstr "SMSIR_TEMPLATE_ID باید یک عدد صحیح معتبر باشد"
+
+#: authentication/sms_provider.py:40
+msgid "SMSIR_BASE_URL is not configured in settings"
+msgstr "SMSIR_BASE_URL در تنظیمات پیکربندی نشده است"
+
+#: authentication/sms_provider.py:91
+msgid "SMS provider returned an error"
+msgstr "سرویس پیامک خطا برگرداند"
+
+#: authentication/sms_provider.py:102
+#, python-brace-format
+msgid "SMS provider error: {error}"
+msgstr "خطای سرویس پیامک: {error}"
+
+#: authentication/sms_provider.py:110
+msgid "SMS provider timeout occurred"
+msgstr "زمان انتظار سرویس پیامک به پایان رسید"
+
+#: authentication/sms_provider.py:115
+msgid "SMS service timeout"
+msgstr "زمان انتظار سرویس پیامک به پایان رسید"
+
+#: authentication/sms_provider.py:121
+msgid "SMS provider connection error occurred"
+msgstr "خطای اتصال به سرویس پیامک رخ داد"
+
+#: authentication/sms_provider.py:130
+msgid "SMS service connection error"
+msgstr "خطای اتصال به سرویس پیامک"
+
+#: authentication/sms_provider.py:136
+msgid "Unexpected error occurred during SMS send"
+msgstr "خطای غیرمنتظره در ارسال پیامک رخ داد"
+
+#: authentication/sms_provider.py:144
+#, python-brace-format
+msgid "Unexpected SMS error: {error}"
+msgstr "خطای غیرمنتظره پیامک: {error}"
+
+#: authentication/validators.py:25
+msgid "OTP code must be a string"
+msgstr "کد یکبار مصرف باید متن باشد"
+
+#: authentication/validators.py:30
+msgid "OTP code must contain only digits"
+msgstr "کد یکبار مصرف فقط باید شامل اعداد باشد"
+
+#: authentication/validators.py:33
+#, python-brace-format
+msgid "OTP code must be exactly {OTP_CODE_LENGTH} digits"
+msgstr "کد یکبار مصرف باید دقیقاً {OTP_CODE_LENGTH} رقم باشد"
+
+#: authentication/validators.py:40
+msgid "First name must be a string"
+msgstr "نام باید متن باشد"
+
+#: authentication/validators.py:48
+msgid "First name must be at least 2 characters long"
+msgstr "نام باید حداقل ۲ کاراکتر باشد"
+
+#: authentication/validators.py:51
+msgid "First name cannot exceed 150 characters"
+msgstr "نام نمی‌تواند بیشتر از ۱۵۰ کاراکتر باشد"
+
+#: authentication/validators.py:58
+msgid "Last name must be a string"
+msgstr "نام خانوادگی باید متن باشد"
+
+#: authentication/validators.py:66
+msgid "Last name must be at least 2 characters long"
+msgstr "نام خانوادگی باید حداقل ۲ کاراکتر باشد"
+
+#: authentication/validators.py:69
+msgid "Last name cannot exceed 150 characters"
+msgstr "نام خانوادگی نمی‌تواند بیشتر از ۱۵۰ کاراکتر باشد"
+
+#: authentication/views.py:60
+msgid "OTP sent successfully"
+msgstr "کد یکبار مصرف با موفقیت ارسال شد"
+
+#: authentication/views.py:79
+msgid "OTP verification failed"
+msgstr "تأیید کد یکبار مصرف ناموفق بود"
+
+#: authentication/views.py:83
+msgid "Invalid or Expired OTP code"
+msgstr "کد یکبار مصرف نامعتبر یا منقضی شده است"
+
+#: authentication/views.py:88
+msgid "OTP verified successfully"
+msgstr "کد یکبار مصرف با موفقیت تأیید شد"
+
+#: authentication/views.py:140
+msgid "Invalid or expired signup token"
+msgstr "توکن ثبت‌نام نامعتبر یا منقضی شده است"
+
+#: authentication/views.py:146
+msgid "User with this phone number already exists"
+msgstr "کاربری با این شماره تلفن از قبل وجود دارد"
+
+#: authentication/views.py:180
+msgid "User signup failed"
+msgstr "ثبت‌نام کاربر ناموفق بود"
+
+#: authentication/views.py:188
+msgid "Failed to create user account"
+msgstr "ایجاد حساب کاربری ناموفق بود"
+
+#: authentication/views.py:201
+msgid "Refresh token not found"
+msgstr "توکن بازنشانی یافت نشد"
+
+#: authentication/views.py:231 authentication/views.py:247
+msgid "Invalid or Expired authentication token"
+msgstr "توکن احراز هویت نامعتبر یا منقضی شده است"
+
+#: authentication/views.py:239
+msgid "Token refresh failed"
+msgstr "بازنشانی توکن ناموفق بود"
+
+#: authentication/views.py:269
+msgid "Logout attempted but blacklist failed"
+msgstr "تلاش برای خروج انجام شد اما لیست سیاه ناموفق بود"
+
+#: profiles/models.py:56 profiles/views.py:84
+msgid "This username is already taken."
+msgstr "این نام کاربری قبلاً استفاده شده است."
+
+#: profiles/serializers.py:83 profiles/serializers.py:169
+#, python-brace-format
+msgid "You cannot add more than {Profile.MAX_INTERESTS} interests."
+msgstr "شما نمی‌توانید بیشتر از {Profile.MAX_INTERESTS} علاقه‌مندی اضافه کنید."
+
+#: profiles/serializers.py:174
+msgid "Some interests do not exist."
+msgstr "برخی از علاقه‌مندی‌ها وجود ندارند."
+
+#: profiles/services.py:26 profiles/utils.py:26
+#, python-brace-format
+msgid ""
+"Image file size cannot exceed {max_size}MB. Current size: {current_size}MB"
+msgstr "حجم فایل تصویر نمی‌تواند بیشتر از {max_size} مگابایت باشد. حجم فعلی: {current_size} مگابایت"
+
+#: profiles/services.py:44 profiles/utils.py:44
+#, python-brace-format
+msgid "Invalid image format. Allowed formats: {formats}"
+msgstr "فرمت تصویر نامعتبر است. فرمت‌های مجاز: {formats}"
+
+#: profiles/services.py:54 profiles/utils.py:54
+msgid "Image validation failed"
+msgstr "اعتبارسنجی تصویر ناموفق بود"
+
+#: profiles/services.py:63 profiles/services.py:129 profiles/utils.py:63
+#: profiles/utils.py:129
+#, python-brace-format
+msgid "Invalid image file: {error}"
+msgstr "فایل تصویر نامعتبر است: {error}"
+
+#: profiles/services.py:120 profiles/utils.py:120
+msgid "Image processing failed"
+msgstr "پردازش تصویر ناموفق بود"
+
+#: profiles/signals.py:21
+msgid "Profile created for new user"
+msgstr "پروفایل برای کاربر جدید ایجاد شد"
+
+#: profiles/signals.py:31
+msgid "Profile creation failed during user signup"
+msgstr "ایجاد پروفایل در طول ثبت‌نام کاربر ناموفق بود"
+
+#: profiles/signals.py:51
+msgid "Failed to delete profile picture file during profile deletion"
+msgstr "حذف فایل تصویر پروفایل در طول حذف پروفایل ناموفق بود"
+
+#: profiles/validators.py:13
+msgid "Username must be at least 3 characters long."
+msgstr "نام کاربری باید حداقل ۳ کاراکتر باشد."
+
+#: profiles/validators.py:18
+msgid "Username cannot exceed 32 characters."
+msgstr "نام کاربری نمی‌تواند بیشتر از ۳۲ کاراکتر باشد."
+
+#: profiles/validators.py:24
+msgid ""
+"Username can only contain letters, numbers, and hyphens. Must be 3-32 "
+"characters, start with a letter, no double hyphens, no trailing hyphen."
+msgstr "نام کاربری فقط می‌تواند شامل حروف، اعداد و خط تیره باشد. باید ۳ تا ۳۲ کاراکتر باشد، با حرف شروع شود، بدون خط تیره دوبل و بدون خط تیره در انتها."
+
+#: profiles/validators.py:31
+msgid "Username cannot start with a number."
+msgstr "نام کاربری نمی‌تواند با عدد شروع شود."
+
+#: profiles/validators.py:37
+msgid "This username is reserved and cannot be used."
+msgstr "این نام کاربری رزرو شده و قابل استفاده نیست."
+
+#: profiles/validators.py:51
+msgid "Please provide a valid Instagram URL."
+msgstr "لطفاً یک آدرس اینستاگرام معتبر وارد کنید."
+
+#: profiles/validators.py:56
+msgid "Please provide a valid LinkedIn URL."
+msgstr "لطفاً یک آدرس لینکدین معتبر وارد کنید."
+
+#: profiles/views.py:149
+#, python-brace-format
+msgid "You cannot have more than {Profile.MAX_INTERESTS} interests."
+msgstr "شما نمی‌توانید بیشتر از {Profile.MAX_INTERESTS} علاقه‌مندی داشته باشید."
