@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
+from django.utils.translation import gettext_lazy as _
 from .models import Profile, Interest
 
 
@@ -35,19 +36,19 @@ class ProfileAdmin(admin.ModelAdmin):
     filter_horizontal = ['interests']
     
     fieldsets = (
-        ('User', {
+        (_('User'), {
             'fields': ('user', 'is_host')
         }),
-        ('Profile Information', {
+        (_('Profile Information'), {
             'fields': ('username', 'bio', 'profile_picture', 'profile_image_preview')
         }),
-        ('Interests', {
+        (_('Interests'), {
             'fields': ('interests',)
         }),
-        ('Social Networks', {
+        (_('Social Networks'), {
             'fields': ('instagram_url', 'linkedin_url')
         }),
-        ('Time Information', {
+        (_('Time Information'), {
             'fields': ('created_at', 'updated_at'),
             'classes': ('collapse',)
         }),
@@ -56,12 +57,12 @@ class ProfileAdmin(admin.ModelAdmin):
     def is_host_badge(self, obj):
         if obj.is_host:
             return mark_safe(
-                '<span style="background-color: #28a745; color: white; padding: 3px 10px; border-radius: 3px;">Host</span>'
+                '<span style="background-color: #28a745; color: white; padding: 3px 10px; border-radius: 3px;">{}</span>'.format(_('Host'))
             )
         return mark_safe(
-            '<span style="background-color: #6c757d; color: white; padding: 3px 10px; border-radius: 3px;">User</span>'
+            '<span style="background-color: #6c757d; color: white; padding: 3px 10px; border-radius: 3px;">{}</span>'.format(_('User'))
         )
-    is_host_badge.short_description = 'Type'
+    is_host_badge.short_description = _('Type')
 
     def profile_image_thumbnail(self, obj):
         if obj.profile_picture:
@@ -70,7 +71,7 @@ class ProfileAdmin(admin.ModelAdmin):
                 obj.profile_picture.url
             )
         return '-'
-    profile_image_thumbnail.short_description = 'Image'
+    profile_image_thumbnail.short_description = _('Image')
 
     def profile_image_preview(self, obj):
         if obj.profile_picture:
@@ -78,5 +79,5 @@ class ProfileAdmin(admin.ModelAdmin):
                 '<img src="{}" width="200" style="border-radius: 10px;" />',
                 obj.profile_picture.url
             )
-        return 'No image uploaded'
-    profile_image_preview.short_description = 'Image Preview'
+        return _('No image uploaded')
+    profile_image_preview.short_description = _('Image Preview')

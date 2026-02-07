@@ -36,10 +36,6 @@ msgstr "کاربر ارشد باید is_superuser=True داشته باشد"
 msgid "User"
 msgstr "کاربر"
 
-#: authentication/models.py:63
-msgid "Users"
-msgstr "کاربران"
-
 #: authentication/models.py:90
 msgid "OTP"
 msgstr "رمز یکبار مصرف"
@@ -332,12 +328,6 @@ msgstr "نوع"
 msgid "Username"
 msgstr "نام کاربری"
 
-msgid "User"
-msgstr "کاربر"
-
-msgid "Profiles"
-msgstr "پروفایل‌ها"
-
 msgid "Interests"
 msgstr "علاقه‌مندی‌ها"
 
@@ -367,9 +357,6 @@ msgstr "علاقه‌مندی"
 
 msgid "Host"
 msgstr "میزبان"
-
-msgid "OTPs"
-msgstr "رمزهای یکبار مصرف"
 
 msgid "Users"
 msgstr "کاربران"
@@ -412,3 +399,418 @@ msgstr "تأیید رمز عبور"
 
 msgid "Blacklisted at"
 msgstr "تاریخ لیست سیاه"
+
+# Admin interface strings
+msgid "Profile Information"
+msgstr "اطلاعات پروفایل"
+
+msgid "Social Networks"
+msgstr "شبکه‌های اجتماعی"
+
+msgid "No image uploaded"
+msgstr "تصویری آپلود نشده است"
+
+msgid "Image Preview"
+msgstr "پیش‌نمایش تصویر"
+
+msgid "Personal Info"
+msgstr "اطلاعات شخصی"
+
+msgid "Permissions"
+msgstr "دسترسی‌ها"
+
+msgid "Important dates"
+msgstr "تاریخ‌های مهم"
+
+msgid "Valid"
+msgstr "معتبر"
+
+msgid "Expired"
+msgstr "منقضی شده"
+
+msgid "Rate limited"
+msgstr "محدودیت درخواست"
+
+msgid "Expires in"
+msgstr "منقضی می‌شود در"
+
+# Django admin generic strings
+msgid "Home"
+msgstr "خانه"
+
+msgid "Dashboard"
+msgstr "داشبورد"
+
+msgid "Action:"
+msgstr "عملیات:"
+
+msgid "Go"
+msgstr "اجرا"
+
+msgid "All"
+msgstr "همه"
+
+msgid "Any date"
+msgstr "هر تاریخی"
+
+msgid "Today"
+msgstr "امروز"
+
+msgid "Past 7 days"
+msgstr "۷ روز گذشته"
+
+msgid "This month"
+msgstr "این ماه"
+
+msgid "This year"
+msgstr "امسال"
+
+msgid "No date"
+msgstr "بدون تاریخ"
+
+msgid "Has date"
+msgstr "دارای تاریخ"
+
+msgid "Yes"
+msgstr "بله"
+
+msgid "No"
+msgstr "خیر"
+
+msgid "Unknown"
+msgstr "نامشخص"
+
+msgid "Delete selected %(verbose_name_plural)s"
+msgstr "حذف %(verbose_name_plural)s های انتخاب شده"
+
+msgid "Search"
+msgstr "جستجو"
+
+msgid "Filter"
+msgstr "فیلتر"
+
+msgid "Clear all filters"
+msgstr "پاک کردن همه فیلترها"
+
+msgid "Save"
+msgstr "ذخیره"
+
+msgid "Save and add another"
+msgstr "ذخیره و افزودن مورد دیگر"
+
+msgid "Save and continue editing"
+msgstr "ذخیره و ادامه ویرایش"
+
+msgid "Save as new"
+msgstr "ذخیره به عنوان مورد جدید"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "View on site"
+msgstr "مشاهده در سایت"
+
+msgid "Add"
+msgstr "افزودن"
+
+msgid "Change"
+msgstr "تغییر"
+
+msgid "Add %(name)s"
+msgstr "افزودن %(name)s"
+
+msgid "Change %(name)s"
+msgstr "تغییر %(name)s"
+
+msgid "Delete %(name)s"
+msgstr "حذف %(name)s"
+
+msgid "View %(name)s"
+msgstr "مشاهده %(name)s"
+
+msgid "Add another %(verbose_name)s"
+msgstr "افزودن %(verbose_name)s دیگر"
+
+msgid "Remove"
+msgstr "حذف"
+
+msgid "Successfully deleted %(count)d %(items)s."
+msgstr "%(count)d %(items)s با موفقیت حذف شد."
+
+msgid "Are you sure?"
+msgstr "آیا مطمئن هستید؟"
+
+msgid "No fields changed."
+msgstr "هیچ فیلدی تغییر نکرده است."
+
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "لطفاً خطای زیر را اصلاح کنید."
+msgstr[1] "لطفاً خطاهای زیر را اصلاح کنید."
+
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] "%(counter)s نتیجه"
+msgstr[1] "%(counter)s نتیجه"
+
+msgid "%(full_result_count)s total"
+msgstr "%(full_result_count)s مورد در مجموع"
+
+msgid "No results found"
+msgstr "نتیجه‌ای یافت نشد"
+
+msgid "0 of %(cnt)s selected"
+msgstr "0 از %(cnt)s انتخاب شده"
+
+msgid "All %(total_count)s selected"
+msgstr "همه %(total_count)s انتخاب شده"
+
+msgid "%(sel)s of %(cnt)s selected"
+msgstr "%(sel)s از %(cnt)s انتخاب شده"
+
+msgid "Select %(name)s"
+msgstr "انتخاب %(name)s"
+
+msgid "Select %(name)s to change"
+msgstr "%(name)s را برای تغییر انتخاب کنید"
+
+msgid "Select %(name)s to view"
+msgstr "%(name)s را برای مشاهده انتخاب کنید"
+
+msgid "Show all"
+msgstr "نمایش همه"
+
+msgid "By %(filter_title)s"
+msgstr "بر اساس %(filter_title)s"
+
+msgid "History"
+msgstr "تاریخچه"
+
+msgid "View history"
+msgstr "مشاهده تاریخچه"
+
+msgid "Log in"
+msgstr "ورود"
+
+msgid "Log out"
+msgstr "خروج"
+
+msgid "Site administration"
+msgstr "مدیریت سایت"
+
+msgid "Recent actions"
+msgstr "عملیات اخیر"
+
+msgid "My actions"
+msgstr "عملیات من"
+
+msgid "None available"
+msgstr "موردی موجود نیست"
+
+msgid "Change password"
+msgstr "تغییر رمز عبور"
+
+msgid "Database error"
+msgstr "خطای پایگاه داده"
+
+msgid "Date/time"
+msgstr "تاریخ/زمان"
+
+msgid "Action"
+msgstr "عملیات"
+
+msgid "Object"
+msgstr "شیء"
+
+msgid "User object"
+msgstr "شیء کاربر"
+
+msgid "Flag"
+msgstr "پرچم"
+
+msgid "Addition"
+msgstr "افزودن"
+
+msgid "Deletion"
+msgstr "حذف"
+
+msgid "LogEntry Object"
+msgstr "شیء ثبت وقایع"
+
+msgid "Added"
+msgstr "اضافه شد"
+
+msgid "Changed"
+msgstr "تغییر کرد"
+
+msgid "Deleted"
+msgstr "حذف شد"
+
+msgid "Added {name} \"{object}\"."
+msgstr "{name} «{object}» اضافه شد."
+
+msgid "Changed {fields} for {name} \"{object}\"."
+msgstr "{fields} برای {name} «{object}» تغییر کرد."
+
+msgid "Deleted {name} \"{object}\"."
+msgstr "{name} «{object}» حذف شد."
+
+msgid "Changed {fields}."
+msgstr "{fields} تغییر کرد."
+
+msgid "and"
+msgstr "و"
+
+msgid "This object doesn't have a change history. It probably wasn't added via this admin site."
+msgstr "این شیء تاریخچه تغییراتی ندارد. احتمالاً از طریق این سایت مدیریتی اضافه نشده است."
+
+# Additional field names that appear in admin
+msgid "object id"
+msgstr "شناسه شیء"
+
+msgid "content type"
+msgstr "نوع محتوا"
+
+msgid "action time"
+msgstr "زمان عملیات"
+
+msgid "action flag"
+msgstr "پرچم عملیات"
+
+msgid "change message"
+msgstr "پیام تغییر"
+
+msgid "log entry"
+msgstr "ورودی ثبت وقایع"
+
+msgid "log entries"
+msgstr "ورودی‌های ثبت وقایع"
+
+# Pagination
+msgid "Page %(number)s of %(num_pages)s"
+msgstr "صفحه %(number)s از %(num_pages)s"
+
+msgid "Show %(counter)s"
+msgstr "نمایش %(counter)s"
+
+# Date filters
+msgid "Past %(days)s days"
+msgstr "%(days)s روز گذشته"
+
+msgid "Next %(days)s days"
+msgstr "%(days)s روز آینده"
+
+
+# Empty messages
+msgid "None"
+msgstr "هیچکدام"
+
+msgid "-"
+msgstr "-"
+
+# Model verbose names (common ones)
+msgid "group"
+msgstr "گروه"
+
+msgid "groups"
+msgstr "گروه‌ها"
+
+msgid "permission"
+msgstr "مجوز"
+
+msgid "permissions"
+msgstr "مجوزها"
+
+msgid "user permission"
+msgstr "مجوز کاربر"
+
+msgid "user permissions"
+msgstr "مجوزهای کاربر"
+
+msgid "session"
+msgstr "نشست"
+
+msgid "sessions"
+msgstr "نشست‌ها"
+
+# Common field labels
+msgid "last login"
+msgstr "آخرین ورود"
+
+msgid "superuser status"
+msgstr "وضعیت ابرکاربر"
+
+msgid "staff status"
+msgstr "وضعیت کارمندی"
+
+msgid "active"
+msgstr "فعال"
+
+msgid "codename"
+msgstr "نام کد"
+
+msgid "description"
+msgstr "توضیحات"
+
+# Help texts
+msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+msgstr "الزامی. ۱۵۰ کاراکتر یا کمتر. فقط حروف، اعداد و @/./+/-/_"
+
+msgid "Designates whether the user can log into this admin site."
+msgstr "مشخص می‌کند که آیا کاربر می‌تواند به این سایت مدیریتی وارد شود."
+
+msgid "Designates whether this user should be treated as active. Unselect this instead of deleting accounts."
+msgstr "مشخص می‌کند که آیا این کاربر باید فعال در نظر گرفته شود. به جای حذف حساب‌ها، این گزینه را غیرفعال کنید."
+
+msgid "Designates that this user has all permissions without explicitly assigning them."
+msgstr "مشخص می‌کند که این کاربر همه مجوزها را دارد بدون اینکه صریحاً به آن اختصاص داده شود."
+
+msgid "The groups this user belongs to. A user will get all permissions granted to each of their groups."
+msgstr "گروه‌هایی که این کاربر به آنها تعلق دارد. یک کاربر تمام مجوزهای اعطا شده به هر یک از گروه‌های خود را دریافت می‌کند."
+
+msgid "Specific permissions for this user."
+msgstr "مجوزهای خاص برای این کاربر."
+
+# Errors
+msgid "This field is required."
+msgstr "این فیلد الزامی است."
+
+msgid "This field cannot be blank."
+msgstr "این فیلد نمی‌تواند خالی باشد."
+
+msgid "This field cannot be null."
+msgstr "این فیلد نمی‌تواند تهی باشد."
+
+msgid "Enter a valid value."
+msgstr "یک مقدار معتبر وارد کنید."
+
+msgid "Enter a valid email address."
+msgstr "یک آدرس ایمیل معتبر وارد کنید."
+
+msgid "Enter a valid URL."
+msgstr "یک آدرس اینترنتی معتبر وارد کنید."
+
+msgid "Enter a valid date."
+msgstr "یک تاریخ معتبر وارد کنید."
+
+msgid "Enter a valid time."
+msgstr "یک زمان معتبر وارد کنید."
+
+msgid "Enter a valid date/time."
+msgstr "یک تاریخ/زمان معتبر وارد کنید."
+
+# Confirmation messages
+msgid "The %(name)s \"%(obj)s\" was added successfully."
+msgstr "%(name)s «%(obj)s» با موفقیت اضافه شد."
+
+msgid "The %(name)s \"%(obj)s\" was changed successfully."
+msgstr "%(name)s «%(obj)s» با موفقیت تغییر یافت."
+
+msgid "The %(name)s \"%(obj)s\" was deleted successfully."
+msgstr "%(name)s «%(obj)s» با موفقیت حذف شد."
+
+msgid "You may edit it again below."
+msgstr "می‌توانید دوباره آن را در زیر ویرایش کنید."
+
+msgid "You may add another %(name)s below."
+msgstr "می‌توانید %(name)s دیگری را در زیر اضافه کنید."

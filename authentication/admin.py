@@ -4,12 +4,13 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.utils.safestring import mark_safe
 from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
 from .models import User, OTP
 
 
 class CustomUserCreationForm(UserCreationForm):
-    password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput)
+    password1 = forms.CharField(label=_('Password'), widget=forms.PasswordInput)
+    password2 = forms.CharField(label=_('Password confirmation'), widget=forms.PasswordInput)
 
     class Meta:
         model = User
@@ -41,9 +42,9 @@ class UserAdmin(BaseUserAdmin):
 
     fieldsets = (
         (None, {'fields': ('phone_number', 'password')}),
-        ('Personal Info', {'fields': ('first_name', 'last_name')}),
-        ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
-        ('Important dates', {'fields': ('last_login', 'date_joined')}),
+        (_('Personal Info'), {'fields': ('first_name', 'last_name')}),
+        (_('Permissions'), {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
+        (_('Important dates'), {'fields': ('last_login', 'date_joined')}),
     )
 
     add_fieldsets = (
@@ -66,15 +67,15 @@ class OTPAdmin(admin.ModelAdmin):
     
     def validity_status(self, obj):
         if obj.is_valid():
-            return mark_safe('<span style="color: green; font-weight: bold;">✓ Valid</span>')
-        return mark_safe('<span style="color: red; font-weight: bold;">✗ Expired</span>')
-    validity_status.short_description = 'Status'
+            return mark_safe('<span style="color: green; font-weight: bold;">✓ {}</span>'.format(_('Valid')))
+        return mark_safe('<span style="color: red; font-weight: bold;">✗ {}</span>'.format(_('Expired')))
+    validity_status.short_description = _('Status')
     
     def time_remaining(self, obj):
         now = timezone.now()
         
         if now >= obj.expires_at:
-            return mark_safe('<span style="color: gray;">Expired</span>')
+            return mark_safe('<span style="color: gray;">{}</span>'.format(_('Expired')))
         
         time_to_expiry = obj.expires_at - now
         minutes_to_expiry = int(time_to_expiry.total_seconds() / 60)
@@ -85,9 +86,9 @@ class OTPAdmin(admin.ModelAdmin):
             minutes_until = seconds_until_request // 60
             secs_until = seconds_until_request % 60
             return mark_safe(
-                f'<span style="color: orange;">Rate limited: {minutes_until}m {secs_until}s</span><br>'
-                f'<span style="color: blue;">Expires in: {minutes_to_expiry}m {seconds_to_expiry}s</span>'
+                f'<span style="color: orange;">{_("Rate limited")}: {minutes_until}m {secs_until}s</span><br>'
+                f'<span style="color: blue;">{_("Expires in")}: {minutes_to_expiry}m {seconds_to_expiry}s</span>'
             )
         
-        return mark_safe(f'<span style="color: blue;">Expires in: {minutes_to_expiry}m {seconds_to_expiry}s</span>')
-    time_remaining.short_description = 'Time Info'
+        return mark_safe(f'<span style="color: blue;">{_("Expires in")}: {minutes_to_expiry}m {seconds_to_expiry}s</span>')
+    time_remaining.short_description = _('Time Info')
